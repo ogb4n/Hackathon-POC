@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button id="loginBtn" class="bg-[#449D44] rounded-full h-10 font-bold px-8 py-2">Connexion</button>
+                <button onclick="updateLogin()" id="loginBtn" class="bg-[#449D44] rounded-full h-10 font-bold px-8 py-2">Connexion</button>
             </div>
         </div>
         <!-- LOGO SITE -->
@@ -148,7 +148,7 @@
 
             </div>
         </main>
-        <div class="hidden" id="login">
+        <div id="login" style="display: none">
             <div
                 class="fixed rounded-lg sm:top-1/2 sm:left-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 top-[15vh] left-[12vw] big:h-[400px] 2xl:h-[400px] 2xl:w-[18vw] xl:w-[22vw] lg:w-[28vw] max-sm:w-[80vw] bg-newcolor4 flex flex-col items-center justify-center ">
                 <button class="pl-[30vh] pb-2 text-xl font-medium" onclick="closeRegister()">X</button>
