@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="bg-[#449D44] rounded-full shadow-lg h-10 font-bold px-8 py-2">Connexion</button>
+                <button onclick="updateLogin()" id="loginBtn" class="bg-[#449D44] rounded-full h-10 font-bold px-8 py-2">Connexion</button>
             </div>
         </div>
         <!-- LOGO SITE -->
@@ -116,6 +116,34 @@
                 </div>
 
             </div>
+            <div id="login" style="display: none">
+                <div
+                    class="fixed rounded-lg sm:top-1/2 sm:left-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 top-[15vh] left-[12vw] big:h-[400px] 2xl:h-[400px] 2xl:w-[18vw] xl:w-[22vw] lg:w-[28vw] max-sm:w-[80vw] bg-newcolor4 flex flex-col items-center justify-center ">
+                    <button class="pl-[30vh] pb-2 text-xl font-medium" onclick="closeRegister()">X</button>
+                    <p>Login</p>
+                    <form method="post" class="flex flex-col align-middle mt-8 mb-4">
+                        <div class="mb-4 self-center align-middle">
+                            <input oninput="loginButton()" name="input_loginusername"
+                                class="border-solid border border-gray-400 rounded px-2 py-3" type="text" id="loginEmail"
+                                placeholder="Email address / Username" required />
+                        </div>
+                        <div class="mb-[1vh] self-center align-middle items-center">
+                            <input oninput="loginButton()" name="input_loginpassword"
+                                class="self-center align-middle border-solid border border-gray-400 rounded px-2 py-3"
+                                type="password" id="loginPass" placeholder="Password" />
+                        </div>
+                        <!-- <p class=" text-center ">Password must contain at least 8 characters, 1 lowercase and uppercase, 1 number and 1 special character</p> -->
+    
+                        <button id="loginBT" disabled
+                            class="mt-[1vh] rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 mb-4"
+                            type="submit">Sign
+                            in</button>
+                        <p class="rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 text-center"
+                            onclick="openRegister()">Register</p>
+                        <!-- <button class="rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 " type="submit" onclick="openRegister()">Click here to register</button> -->
+                    </form>
+                </div>
+            </div>
 
 
 
@@ -124,5 +152,5 @@
         <footer></footer>
 
 </body>
-
+<script src="../javascript/login.js"></script>
 </html>
