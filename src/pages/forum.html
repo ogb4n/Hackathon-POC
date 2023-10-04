@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/output.css">
     <title>Forum</title>
 </head>
+
 <body class="bg-[#252E39]">
     <header class="text-white">
-<!-- NAVBAR -->
+        <!-- NAVBAR -->
         <div class="absolute w-full bg-[#028ACC] h-24">
             <div class="container bg-[#028ACC] w-[100%] mx-auto flex items-center h-24">
                 <!-- <a href="" class="flex items-center justify-center">
@@ -27,7 +29,7 @@
                             <a href="./server.html">
                                 <span>Le Serveur</span>
                             </a>
-                        
+
                         </li>
                         <li class="p-5 xl:p-8">
                             <a href="./shop.html">
@@ -46,14 +48,135 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="bg-[#449D44] rounded-full h-10 font-bold px-8 py-2">Connexion</button>
+                <button id="loginBtn" class="bg-[#449D44] rounded-full h-10 font-bold px-8 py-2">Connexion</button>
             </div>
         </div>
-<!-- LOGO SITE -->
+        <!-- LOGO SITE -->
         <div class="items-center">
-            <a href="./index.html" target="_blank" rel="noopener noreferrer"><img class="relative top-10 h-56 left-24" src="../medias/logo-5ans.png" alt="logo_5_ans"></a>
+            <a href="./index.html" target="_blank" rel="noopener noreferrer"><img class="relative top-10 h-56 left-24"
+                    src="../medias/logo-5ans.png" alt="logo_5_ans"></a>
 
         </div>
         </head>
+        <main>
+            <!-- LOGIN BLUR -->
+            <div id="blurrr" class="hidden backdrop-blur-sm  fixed top-0 left-0 w-[10000px] h-[10000px]"></div>
+
+            <!-- Image -->
+            <div class="h-[440px] w-full bg-white"></div>
+
+            <!-- PANNEAU TOPICS -->
+
+            <div class="container z-50 relative bottom-20 place-items-start">
+                <div class="h-[610px] justify-start ml-36 w-[450px] rounded-3xl bg-[#1E1E1E] opacity-80">
+                    <div class="grid gap-y-3 pt-5 grid-cols-1 text-center mx-auto place-items-center">
+                        <h1 class="mx-auto text-center relative font-extrabold text-lg"> LES CATEGORIES </h1>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">DISCUSSION
+                            GENERALE</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">LE
+                            JEU</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">RECRUTEMENT</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">AIDE</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">SUGGESTIONS</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">EVENEMENTS</a>
+                        <a href=""
+                            class="w-[390px] h-[60px] relative bg-gradient-to-r from-[#449D44] to-[#028ACC] focus:border-2 focus:border-[#028ACC] mx-auto opacity-100 font-bold pt-4 text-lg rounded-2xl top-10">POLITIQUE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--  CONTENT  -->
+            <div class="h-[1360px] z-0 relative bottom-[550px] mx-auto rounded-2xl bg-[#353E4A] w-[1730px]">
+                <!-- CHATBOX -->
+                <div class="container">
+                    <div class="relative w-[1043px] top-7 ml-[600px] rounded-3xl  h-[440px] bg-[#252E39]">
+                        <h1 class="mx-auto text-center relative top-4 font-extrabold text-lg">LA CHATBOX</h1>
+                        <div class="w-[1005px] h-[317px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                        </div>
+                        <input
+                            class="peer h-10 w-[950px] rounded-[7px] border border-blue-gray-200 bg-black bg-opacity-20 ml-8 px-3 mt-[45px] font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-[#028ACC] focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                            placeholder=" ecrivez votre message " />
+                    </div>
+                </div>
+                <!-- RECENT TOPICS -->
+                <div class="container">
+                    <div class="relative w-[1200px] top-7 left-24 mt-10 mx-auto rounded-3xl  h-[730px] bg-[#252E39]">
+                        <h1 class="mx-auto text-center relative top-4 font-extrabold text-lg">TOPICS RECENTS</h1>
+                        <div class="grid grid-cols-1 gap-y-3 items-center mx-auto">
+
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+                            <div
+                                class="w-[1005px] h-[60px] relative bg-[#000000] mx-auto opacity-20 rounded-2xl top-10">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            </div>
+        </main>
+        <div class="hidden" id="login">
+            <div
+                class="fixed rounded-lg sm:top-1/2 sm:left-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 top-[15vh] left-[12vw] big:h-[400px] 2xl:h-[400px] 2xl:w-[18vw] xl:w-[22vw] lg:w-[28vw] max-sm:w-[80vw] bg-newcolor4 flex flex-col items-center justify-center ">
+                <button class="pl-[30vh] pb-2 text-xl font-medium" onclick="closeRegister()">X</button>
+                <p>Login</p>
+                <form method="post" class="flex flex-col align-middle mt-8 mb-4">
+                    <div class="mb-4 self-center align-middle">
+                        <input oninput="loginButton()" name="input_loginusername"
+                            class="border-solid border border-gray-400 rounded px-2 py-3" type="text" id="loginEmail"
+                            placeholder="Email address / Username" required />
+                    </div>
+                    <div class="mb-[1vh] self-center align-middle items-center">
+                        <input oninput="loginButton()" name="input_loginpassword"
+                            class="self-center align-middle border-solid border border-gray-400 rounded px-2 py-3"
+                            type="password" id="loginPass" placeholder="Password" />
+                    </div>
+                    <!-- <p class=" text-center ">Password must contain at least 8 characters, 1 lowercase and uppercase, 1 number and 1 special character</p> -->
+
+                    <button id="loginBT" disabled
+                        class="mt-[1vh] rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 mb-4"
+                        type="submit">Sign
+                        in</button>
+                    <p class="rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 text-center"
+                        onclick="openRegister()">Register</p>
+                    <!-- <button class="rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 " type="submit" onclick="openRegister()">Click here to register</button> -->
+                </form>
+            </div>
+        </div>
 </body>
+
+<script src="../javascript/login.js"></script>
 </html>
