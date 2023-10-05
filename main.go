@@ -30,7 +30,7 @@ func main() {
 	registerNewBasicHandler("templates/wiki.html", nil, "/wiki", nil)
 	registerNewBasicHandler("template/account.html", nil, "/account", nil)
 	registerNewBasicHandler("templates/faction.html", nil, "/faction", nil)
-	registerNewBasicHandler("templates/index.html", nil, "/login", nil)
+	registerNewBasicHandler("templates/index.html", nil, "/login", processPostLogin)
 
 	go InstallTailwindCSS()
 
@@ -94,9 +94,20 @@ func processPostLogin(w http.ResponseWriter, r *http.Request, data *any) {
 
 // BA LINK
 func checkLogin(login string, password string) bool {
-	db, _ := sql.Open("MYSQL", "root:@tcp(172.18.0.2:3306)/lowcalldata")
+	db, err := sql.Open("mysql", "root:@tcp(10.5.0.6:3306)/lowcalldata")
+
+	if err != nil {
+		println(err.Error())
+		return false
+	}
+
 	defer db.Close()
-	result, _ := db.Query("SELECT password FROM authme WHERE username=?", login)
+	result, err := db.Query("SELECT password FROM authme WHERE username=?", login)
+
+	if err != nil {
+		println(err.Error())
+		return false
+	}
 
 	if result.Next() {
 		pass := new(string)
@@ -106,6 +117,7 @@ func checkLogin(login string, password string) bool {
 		return isValidPassword(password, *pass)
 	}
 
+	println("login not found")
 	return false
 }
 
