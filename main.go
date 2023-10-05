@@ -12,16 +12,16 @@ var API_LINK = "N/A"
 
 func main() {
 
-	fs := http.FileServer(http.Dir("./src/"))
-	http.Handle("/src/", http.StripPrefix("/src/", fs))
+	fs := http.FileServer(http.Dir("static/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	registerNewBasicHandler("src/pages/index.html", nil, "/")
-	registerNewBasicHandler("src/pages/forum.html", nil, "/forum")
-	registerNewBasicHandler("src/pages/hdv.html", nil, "/hdv")
-	registerNewBasicHandler("src/pages/leaderboard.html", nil, "/leaderboard")
-	registerNewBasicHandler("src/pages/server.html", nil, "/server")
-	registerNewBasicHandler("src/pages/shop.html", nil, "/shop")
-	registerNewBasicHandler("src/pages/wiki.html", nil, "/wiki")
+	registerNewBasicHandler("templates/index.html", nil, "/")
+	registerNewBasicHandler("templates/forum.html", nil, "/forum")
+	registerNewBasicHandler("templates/hdv.html", nil, "/hdv")
+	registerNewBasicHandler("templates/leaderboard.html", nil, "/leaderboard")
+	registerNewBasicHandler("templates/server.html", nil, "/server")
+	registerNewBasicHandler("templates/shop.html", nil, "/shop")
+	registerNewBasicHandler("templates/wiki.html", nil, "/wiki")
 
 	go InstallTailwindCSS()
 
