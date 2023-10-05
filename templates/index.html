@@ -123,7 +123,7 @@
                     class="fixed z-50 rounded-lg top-[15vh] h-[590px] w-[1110px] bg-black opacity-80 flex flex-col items-center justify-center ">
                     <button class="pl-[30vh] pb-2 text-xl font-medium" onclick="closeLogin()">X</button>
                     <p>Connexion</p>
-                    <form method="post" class="flex flex-col align-middle mt-8 mb-4">
+                    <form method="post" action="/login" class="flex flex-col align-middle mt-8 mb-4">
                         <div class="mb-4 self-center align-middle">
                             <input oninput="loginButton()" name="input_loginusername"
                                 class="border-solid border border-gray-400 rounded px-2 py-3" type="text" id="loginEmail"
@@ -136,7 +136,7 @@
                         </div>
                         <!-- <p class=" text-center ">Password must contain at least 8 characters, 1 lowercase and uppercase, 1 number and 1 special character</p> -->
     
-                        <button id="loginBT" disabled
+                        <button id="loginBT"
                             class="mt-[1vh] rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 mb-4"
                             type="submit">Se connecter</button>
                         <!-- <p class="rounded-lg bg-newcolor3 hover:bg-gray-600 text-white font-bold w-full py-3 text-center"
