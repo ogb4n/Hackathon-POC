@@ -22,6 +22,8 @@ func main() {
 	registerNewBasicHandler("templates/server.html", nil, "/server")
 	registerNewBasicHandler("templates/shop.html", nil, "/shop")
 	registerNewBasicHandler("templates/wiki.html", nil, "/wiki")
+	registerNewBasicHandler("template/account.html", nil, "/account")
+	registerNewBasicHandler("templates/faction.html", nil, "/faction")
 
 	go InstallTailwindCSS()
 
@@ -45,6 +47,7 @@ func InstallTailwindCSS() {
 }
 
 func registerNewBasicHandler(page string, data any, link string) {
+	println("Registering " + link + " to " + page)
 	http.HandleFunc(link, func(w http.ResponseWriter, r *http.Request) {
 		tmpl, err := template.ParseFiles(page)
 
